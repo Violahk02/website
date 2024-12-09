@@ -1,0 +1,389 @@
+/*************** Reset *********************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(billeder/papir_resultat.webp);
+}
+
+main {
+  margin: 50px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.logo {
+  width: 60%;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgb(130, 201, 237);
+  box-shadow: 8px 8px rgb(238, 164, 232);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Skubber knapperne til højre */
+  margin-right: 0; /* Fjerner den højre margin */
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.button-link {
+  display: inline-block; /* Makes the link behave like a block element */
+  padding: 10px 20px; /* Adds padding to make it look like a button */
+  background-color: rgb(255, 255, 255); /* Background color */
+  color: black; /* Text color */
+  text-align: center; /* Centers the text */
+  text-decoration: none; /* Removes the underline */
+  border-radius: 30px; /* Rounds the corners */
+  border: none; /* Removes default border */
+  font-size: 1.3rem; /* Sets the font size */
+  cursor: pointer; /* Shows a pointer on hover */
+  font-family: Delius;
+  box-shadow: 0 5px 5px rgb(67, 65, 65);
+}
+
+.button-link:hover {
+  background-color: rgb(255, 195, 231); /* Darkens the background on hover */
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(249, 130, 202);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+/* Burger menu i mobil version */
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+h1 {
+  color: rgb(181, 208, 174);
+  font-family: roboto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  color: rgb(249, 130, 202);
+  background-color: rgb(255, 195, 231);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: roboto;
+  font-size: 1.3rem;
+}
+
+/* Første afsnit */
+/* tekstbox */
+.tekstbox {
+  position: relative;
+  p {
+    position: absolute;
+    margin: 30px;
+    font-family: Delius;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 40px;
+  }
+}
+
+/*Andet afsnit - idas værker */
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  .img2,
+  .img3,
+  .img4,
+  .img5 {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
+/* videoer */
+.grid_1-1_2 {
+  gap: 10px;
+  /* margin: 80px; */
+  background-image: url(billeder/mobilbox.svg);
+  background-size: cover;
+  width: 100%;
+  left: -2%;
+  aspect-ratio: 545/806;
+  padding: 8%;
+  padding-top: 20%;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 560/315;
+  border-radius: 20px;
+}
+
+img,
+video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+footer {
+  background: rgb(248, 248, 144);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-family: roboto;
+  font-weight: 600;
+  color: rgb(249, 130, 202);
+}
+
+/* Scroll ved klik af cta knap */
+:root {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.grid_5-1 {
+  display: grid;
+  grid-template-columns: span 3;
+}
+
+#cta {
+  display: inline-block; /* Makes the link behave like a block element */
+  padding: 10px 20px; /* Adds padding to make it look like a button */
+  background-color: rgb(255, 195, 231); /* Background color */
+  color: rgb(249, 130, 202); /* Text color */
+  text-align: center; /* Centers the text */
+  text-decoration: none; /* Removes the underline */
+  border-radius: 30px; /* Rounds the corners */
+  border: none; /* Removes default border */
+  font-size: 1rem; /* Sets the font size */
+  cursor: pointer; /* Shows a pointer on hover */
+  font-family: Delius;
+  box-shadow: 0 5px 5px rgb(67, 65, 65);
+  margin: 0 auto;
+  margin: auto auto 2em;
+  height: 2.5em;
+  z-index: 2;
+  margin-bottom: 40%;
+}
+
+#cta:hover {
+  background-color: rgb(249, 130, 202); /* Darkens the background on hover */
+  color: white;
+}
+
+@media (min-width: 800px) {
+  main {
+    margin: 80px;
+  }
+
+  .logo {
+    width: 35%;
+    background-size: cover;
+  }
+
+  .hero {
+    display: grid;
+  }
+  .hero > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .grid_5-1 {
+    display: grid;
+    grid-template-columns: span 3;
+  }
+
+  #cta {
+    display: inline-block; /* Makes the link behave like a block element */
+    padding: 10px 20px; /* Adds padding to make it look like a button */
+    background-color: rgb(255, 195, 231); /* Background color */
+    color: rgb(249, 130, 202); /* Text color */
+    text-align: center; /* Centers the text */
+    text-decoration: none; /* Removes the underline */
+    border-radius: 30px; /* Rounds the corners */
+    border: none; /* Removes default border */
+    font-size: 1.5rem; /* Sets the font size */
+    cursor: pointer; /* Shows a pointer on hover */
+    font-family: Delius;
+    box-shadow: 0 5px 5px rgb(67, 65, 65);
+    margin: 0 auto;
+    margin: auto auto 2em;
+    height: 2em;
+    z-index: 2;
+  }
+
+  #cta:hover {
+    background-color: rgb(249, 130, 202); /* Darkens the background on hover */
+    color: white;
+  }
+
+  h1 {
+    color: rgb(181, 208, 174);
+    font-family: roboto;
+    text-align: center;
+  }
+
+  h2 {
+    color: rgb(249, 130, 202);
+    background-color: rgb(255, 195, 231);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: roboto;
+  }
+
+  .tekstbox {
+    position: relative;
+    p {
+      position: absolute;
+      margin: 30px;
+      font-family: Delius;
+      color: white;
+      font-size: 1.3rem;
+      margin-top: 40px;
+    }
+  }
+
+  .h12 {
+    margin: 40px;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin: 30px;
+    position: relative;
+    .lyseroedboks {
+      grid-column: span 2;
+      position: absolute;
+      z-index: -2;
+    }
+  }
+
+  .grid_1-1_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    background-image: url(billeder/billedebaggrund2.svg);
+    background-size: cover;
+    width: 100%;
+    left: -2%;
+    aspect-ratio: 1700/733;
+    padding: 7%;
+    padding-top: 8%;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: stretch;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    .img2 {
+      aspect-ratio: 477/790;
+      grid-row: span 2;
+    }
+    .img3 {
+      aspect-ratio: 876/367;
+      grid-column: span 3;
+    }
+    .img4 {
+      aspect-ratio: 426/332;
+      grid-column: 2 / span 1;
+      grid-row: 2;
+    }
+    .img5 {
+      aspect-ratio: 426/315;
+      grid-column: 3 / span 3;
+      grid-row: 2;
+    }
+  }
+}

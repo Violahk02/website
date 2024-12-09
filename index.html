@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <title>Passionssite</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="billeder/logo2.svg" alt="Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#sektion1" class="button-link">Udforsk Idas passion</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero" class="scroll-container">
+      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+      <dotlottie-player src="https://lottie.host/017ad781-7fcf-4247-885b-2ff2c1e1e97c/woDYc8ZAJJ.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+      <div class="grid_5-1">
+        <a href="#sektion1" id="cta">Udforsk Idas passion</a>
+      </div>
+    </section>
+    <main class="scroll-container">
+      <div class="h12">
+        <h1 id="sektion1">IDAS PASSION FOR AT STRIKKE OG HÆKLE</h1>
+        <!-- Her har jeg givet min overskrift en id, da jeg i min knap har linket til at siden skal scrolle dertil, når man klikker på den. -->
+        <h2>EN INDRE RO OG FORDYBELSE</h2>
+      </div>
+      <div class="grid_1-1">
+        <div>
+          <div class="tekstbox">
+            <p>Ida fandt for alvor passionen for at strikke og hækle, da hun som mange andre fik en masse tid tilovers under coronakrisen. Sammen med hendes mormor har hun strikket og hæklet alt fra kjoler, bluser, tasker og enda også blomster. Når Ida strikker finder hun en indre ro ved at forybe sig og slå tankerne fra i en travl hverdag. Her henter hun inspiration fra både Pinterest, Instagram og bøger.</p>
+            <img src="billeder/textbox.svg" alt="tekstbox" />
+          </div>
+        </div>
+        <div>
+          <img src="billeder/billede1_resultat.webp" class="tekstbox" alt="billede1" />
+        </div>
+      </div>
+      <h2>IDAS VÆRKER</h2>
+
+      <div class="grid_1-1-1">
+        <!-- <img src="billeder/billedebaggrund.svg" class="lyseroedboks" alt="lyserødboks" /> -->
+        <img src="billeder/billede2_resultat.webp" class="img2" alt="billede2" />
+        <img src="billeder/billede3_resultat.webp" class="img3" alt="billede3" />
+        <img src="billeder/billede4_resultat.webp" class="img4" alt="billede4" />
+        <img src="billeder/billede5_resultat.webp" class="img5" alt="billede5" />
+      </div>
+
+      <h2>INTERVIEW</h2>
+      <div class="grid_1-1_2">
+        <video controls src="video.tmp/idasstrikkeunivers.mp4" class="video"></video>
+        <iframe class="video" src="https://www.youtube.com/embed/DuzR5EnpHF4?si=RfhOsqM_yBh4bNqy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </main>
+    <script src="menu.js"></script>
+    <footer>Lavet af Viola Holm Knudsen</footer>
+  </body>
+</html>
